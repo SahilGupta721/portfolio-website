@@ -10,7 +10,7 @@ export const projects = [
   {
     id: 1,
     name: "EcoSphere",
-    description: "a smart platform for climate and land protection powered by AI and live environmental data",
+    description: "A smart platform for climate and land protection powered by AI and live environmental data",
     image: EcoSphere,
     featured: true,
     link:"https://www.eco-sphere.co/"
@@ -18,7 +18,7 @@ export const projects = [
   {
     id: 2,
     name: "InterviewPrep",
-    description: "refine your interview skills with AI-generated questions and personalized feedback.",
+    description: "Refine your interview skills with AI-generated questions and personalized feedback.",
     image: InterviewPrep,
     featured: true,
     link:"https://interviewprep-ddne.onrender.com/"
@@ -26,7 +26,7 @@ export const projects = [
   {
     id: 3,
     name: "VizWeather",
-    description: "visualize live weather data with Python-generated charts and dynamic, temperature-responsive UI.",
+    description: "Visualize live weather data with Python-generated charts and dynamic, temperature-responsive UI.",
     image: VizWeather,
     featured: true,
     link:"https://vizweather.vercel.app/"
@@ -34,7 +34,7 @@ export const projects = [
   {
     id: 4,
     name: "BugSmasher",
-    description: "catch bugs, rack up points, and keep up as the speed increases.",
+    description: "Catch bugs, rack up points, and keep up as the speed increases.",
     image: bugImage,
     featured: true,
     link:"http://studentweb.cencol.ca/sgupt172/Assignment-3/assignment3.html"

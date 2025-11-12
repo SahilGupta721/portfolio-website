@@ -1,6 +1,7 @@
 import "../css/about.css";
 import sahil_ph from '../images/sahil_ph.jpg';
-import Services from "./Services";
+import Services from "./services.jsx";
+
 function About() {
   return (
     <>
