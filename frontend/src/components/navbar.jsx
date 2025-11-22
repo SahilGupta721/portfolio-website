@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../css/navbar.css';
+import { event } from '../pages/analytics';
 
 function Navbar() {
   const navLinks = [
@@ -7,12 +8,20 @@ function Navbar() {
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' },
   ];
-   const handleScroll = (id) => {
+  const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
+
+      // Track GA event
+      event({
+        action: "nav_click",
+        category: "Navbar",
+        label: `Scrolled to ${id} section`
+      });
     }
   };
+
 
   return (
     <header className="navbar">
