@@ -1,7 +1,7 @@
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import '../css/home.css'; // your separate CSS file
-import toronto from  "../images/toronto.jpg";
+import toronto from "../images/toronto.jpg";
 
 function Home() {
 
@@ -11,7 +11,7 @@ function Home() {
     <>
 
       <div className="home-page">
-        
+
         {/* Hero Section */}
         <section className="hero-section">
           <div className="hero-container">
@@ -32,7 +32,7 @@ function Home() {
         {/* Featured projects Section */}
         <section className="projects-section">
           <div className="project-container">
-            <h2 id='projects'  className="section-title">Some of recent work</h2>
+            <h2 id='projects' className="section-title">Some of recent work</h2>
             <div className="projects-scroll">
               {featuredprojects.map((projects) => (
                 <div className="project-card">
@@ -48,8 +48,18 @@ function Home() {
                   </Link>
 
                   <div className="project-info">
-                    <p>{projects.name}</p>
-                    <p>{projects.description}</p>
+                    <p className="project-name">{projects.name}</p>
+                    <p className="project-desc">{projects.description}</p>
+                    <div className="badges">
+                      {projects.technologies.map((tech, index) => (
+                        <span key={index} className={`badge ${tech.toLowerCase().replace('.', '')}`}>
+                          {tech}
+                        </span>
+                      ))}
+                      <span className={`badge ${projects.type}`}>
+                        {projects.type === "team" ? "Team Project" : "Solo Project"}
+                      </span>
+                    </div>
                   </div>
                 </div>
               ))}
