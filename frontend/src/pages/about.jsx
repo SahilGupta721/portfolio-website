@@ -9,7 +9,7 @@ function About() {
       <div className="stories-page">
         <main className="isolate">
 
-          {/* Hero Section */}
+          {/* about Section */}
           <div id='about' className="hero-section-ab">
             <div className="hero-container-ab">
               <div className="hero-text-ab">
@@ -38,8 +38,8 @@ function About() {
                 <div className="section-image">
                   <div className="image-wrapper">
                     <img
-                    id='my-photo'
-                   
+                      id='my-photo'
+
                       src={`${sahil_ph}`}
                       alt="Cultural travel destinations and local experiences"
                     />
@@ -70,13 +70,13 @@ function About() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </a>
-                
+
                 <a href="https://linkedin.com/in/sahilgupta123" className="cta-secondary" target="_blank"
                   rel="noopener noreferrer">
                   Learn more
                   <span aria-hidden="true">→</span>
                 </a>
-                
+
                 <a href="https://github.com/sahilgupta721" className="cta-secondary" target="_blank"
                   rel="noopener noreferrer">
                   View my Work

@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
 
 /* Base Styles */
@@ -19,7 +18,7 @@ body {
 .hero-section .hero-container {
   display: flex;
   justify-content: center;
-  padding: 1.25rem; 
+  padding: 1.25rem;
 }
 
 @media (min-width: 640px) {
@@ -50,7 +49,7 @@ body {
   }
 }
 
-.hero-section .hero-container > div {
+.hero-section .hero-container>div {
   width: 100%;
   max-width: 1280px;
 }
@@ -92,29 +91,33 @@ body {
     font-size: 1.25rem;
   }
 }
-.hero-text > h1,
-.hero-text > h2 {
+
+.hero-text>h1,
+.hero-text>h2 {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  
+
 }
+
 .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  font-size: var(--text-4xl);
+  line-height: var(--tw-leading, var(--text-4xl--line-height));
 }
+
 /* project Section */
 .projects-section {
   display: flex;
   justify-content: center;
   padding: 1.25rem;
-  padding-top:5rem;
+  padding-top: 5rem;
 }
+
 /* Content sections */
 .section {
   overflow: hidden;
   background-color: #ffffff;
   padding-top: 6rem;
-  padding-bottom: 8rem; 
+  padding-bottom: 8rem;
 }
 
 .project-container {
@@ -159,7 +162,7 @@ body {
   }
 }
 
-.projects-section > div {
+.projects-section>div {
   width: 100%;
   max-width: 1280px;
 }
@@ -180,11 +183,24 @@ body {
 .project-card {
   position: relative;
   flex-shrink: 0;
+  padding: 5px;
   width: 16rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   border-radius: 0.5rem;
+
+  /* Floating effect */
+  background: #ffffff;
+  /* ensures shadow is visible */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On hover, card lifts slightly */
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .project-card .project-image {
@@ -196,6 +212,7 @@ body {
 }
 
 
+
 /* Scrollbar hide */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -204,4 +221,125 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Hide Scrollbar */
+.project-container::-webkit-scrollbar {
+  display: none;
+}
+
+.project-container {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Project Card */
+.project-card {
+  flex: 0 0 16rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Project Image */
+.project-card .project-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.75rem 0.75rem 0 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Text */
+.project-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0 0.75rem;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #333;
+  padding: 0 0.75rem;
+  line-height: 1.4;
+}
+
+/* Badges */
+.project-card .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 0.75rem 0.75rem 0.75rem;
+}
+
+.project-card .badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Missing Technology Badges ===== */
+
+.badge.javascript {
+  background: #f7df1e;
+  color: #000;
+}
+
+.badge.typescript {
+  background: #3178c6;
+}
+
+.badge.html5 {
+  background: #e34f26;
+}
+
+.badge.css3 {
+  background: #1572b6;
+}
+
+.badge.google-gemini {
+  background: linear-gradient(135deg, #4285f4, #9b72cb);
+}
+
+.badge.leafletjs {
+  background: #199900;
+}
+
+.badge.python {
+  background: #306998;
+}
+
+.badge.react {
+  background: #61dafb;
+  color: #000;
+}
+
+.badge.team {
+  background: #4a6cf7;
+}
+
+.badge.solo {
+  background: #8a4af7;
+}
+
+/* Optional: Hover Effect for Badges */
+.project-card .badge:hover {
+  opacity: 0.85;
 }
