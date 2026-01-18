@@ -43,6 +43,7 @@ export const projects = [
       "Python",
       "Firebase",
       "MongoDB",
+      "Google Analytics",
       "Cohere LLM",
       "Web Scraping",
       "Tailwind CSS"

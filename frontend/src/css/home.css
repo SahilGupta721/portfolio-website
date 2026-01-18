@@ -446,6 +446,12 @@ body {
   color: #fff;
 }
 
+.badge.google-analytics {
+  background: #F4B400;
+  color: #000;
+  /* black text looks good on orange */
+}
+
 /* Optional: Hover Effect for Badges */
 .project-card .badge:hover {
   opacity: 0.85;
