@@ -70,11 +70,11 @@ export const projects = [
     description: "A solo-built AI interview practice app that generates role-specific questions from job postings, analyzes video responses, and delivers personalized feedback to improve clarity, confidence, and hiring readiness.",
     image: InterviewPrep,
     featured: true,
-    link: "https://interviewprep-ddne.onrender.com/",
+    link: "https://interview-prep-dusky.vercel.app/",
     technologies: ["React", "JavaScript", "Google-Gemini", "CSS3"],
     type: "solo",
     github: "https://github.com/SahilGupta721/InterviewPrep",
-    live: "https://interviewprep-ddne.onrender.com/"
+    live: "https://interview-prep-dusky.vercel.app/"
   },
   {
     id: 5,
