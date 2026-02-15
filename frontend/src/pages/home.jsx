@@ -4,12 +4,10 @@ import '../css/home.css';
 import toronto from "../images/toronto.jpg";
 
 function Home() {
-
   const featuredprojects = projects.filter(d => d.featured);
 
   return (
     <>
-
       <div className="home-page">
 
         {/* Hero Section */}
@@ -22,50 +20,67 @@ function Home() {
               }}
             >
               <div className="hero-text text-4xl">
-                <h1>I’m Sahil Gupta based in Toronto, Canada</h1>
+                <h1>I'm Sahil Gupta based in Toronto, Canada</h1>
                 <h2>Software Developer | AI/ML | Project Analyst</h2>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Featured projects Section */}
+        {/* Featured Projects Section */}
         <section className="projects-section">
           <div className="project-container">
-            <h2 id='projects' className="section-title">Some of recent work</h2>
-            <div className="projects-scroll">
-              {featuredprojects.map((projects) => (
-                <div className="project-card">
-                  <Link to={`${projects.link}`} onClick={(e) => {
-                    e.preventDefault();
-                    window.open(`${projects.link}`, "_blank", "noopener,noreferrer");
-                  }}>
+            <h2 id="projects" className="section-title">Some of recent work</h2>
 
-                    <div
-                      className="project-image"
-                      style={{ backgroundImage: `url("${projects.image}")` }}
-                    />
+            <div className="projects-scroll">
+              {featuredprojects.map((project, index) => (
+                <div className="project-card" key={index}>
+                  <Link
+                    to={project.link}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open(project.link, "_blank", "noopener,noreferrer");
+                    }}
+                  >
+                    <div className="project-image-container">
+                      <div
+                        className="project-image"
+                        style={{ backgroundImage: `url("${project.image}")` }}
+                      />
+                      <div className="image-overlay">
+                        <span className="overlay-badge">
+                          {project.category || "Project"}
+                        </span>
+                      </div>
+                    </div>
                   </Link>
 
                   <div className="project-info">
-                    <p className="project-name">{projects.name}</p>
-                    <p className="project-desc">{projects.description}</p>
+                    <p className="project-name">{project.name}</p>
+                    <p className="project-desc">{project.description}</p>
+
                     <div className="badges">
-                      {projects.technologies.map((tech, index) => (
-                        <span key={index} className={`badge ${tech.toLowerCase().replace('.', '').replace(/\s+/g, '-')}`}>
+                      {project.technologies.map((tech, idx) => (
+                        <span
+                          key={idx}
+                          className={`badge ${tech
+                            .toLowerCase()
+                            .replace('.', '')
+                            .replace(/\s+/g, '-')}`}
+                        >
                           {tech}
                         </span>
                       ))}
-                      <span className={`badge ${projects.type}`}>
-                        {projects.type === "team" ? "Team Project" : "Solo Project"}
+                      <span className={`badge ${project.type}`}>
+                        {project.type === "team" ? "Team Project" : "Solo Project"}
                       </span>
                     </div>
-                    {/* GitHub / Project Link Badge */}
-                    {/* GitHub and Live Demo Buttons */}
+
+                    {/* Buttons */}
                     <div className="project-card-buttons">
-                      {projects.github && (
+                      {project.github && (
                         <a
-                          href={projects.github}
+                          href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="project-button github-button"
@@ -73,9 +88,10 @@ function Home() {
                           GitHub
                         </a>
                       )}
-                      {projects.live && (
+
+                      {project.live && (
                         <a
-                          href={projects.live}
+                          href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="project-button live-button"
@@ -83,17 +99,26 @@ function Home() {
                           Live Demo
                         </a>
                       )}
-                    </div>
+                      {projects.youtube && (
 
+                        <a href={projects.youtube}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-button youtube-button"
+                        >
+                          YouTube
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-      </div>
-    </>
 
+          </div>
+        </section >
+      </div >
+    </>
   );
 }
 

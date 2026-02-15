@@ -298,11 +298,14 @@ body {
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
-  color: #fff;
   font-weight: 500;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  /* MINIMAL OUTLINE SYSTEM */
+  background: white;
+  border: 1px solid;
+  transition: all 0.2s ease;
 }
 
 .project-card-buttons {
@@ -342,117 +345,176 @@ body {
 }
 
 
-/* ===== Missing Technology Badges ===== */
+/* ========================================
+   MINIMAL OUTLINE BADGE SYSTEM
+   ======================================== */
 
+/* PRIMARY - Main Languages (Darkest, Thickest) */
+.badge.python,
+.badge.react,
+.badge.typescript,
 .badge.javascript {
-  background: #f7df1e;
-  color: #000;
+  border-color: #1f2937;
+  color: #1f2937;
+  border-width: 1.5px;
 }
 
-.badge.typescript {
-  background: #3178c6;
+.badge.python:hover,
+.badge.react:hover,
+.badge.typescript:hover,
+.badge.javascript:hover {
+  background: #1f2937;
+  color: white;
 }
 
-.badge.html5 {
-  background: #e34f26;
-}
-
-.badge.css3 {
-  background: #1572b6;
-}
-
-.badge.google-gemini {
-  background: linear-gradient(135deg, #4285f4, #9b72cb);
-}
-
+/* SECONDARY - Frameworks & Major Tools */
+.badge.fastapi,
+.badge.opencv,
+.badge.yolov8,
+.badge.scikit-learn,
+.badge.google-gemini,
+.badge.cohere-llm,
+.badge.tailwind-css,
 .badge.leafletjs {
-  background: #199900;
+  border-color: #374151;
+  color: #374151;
+  border-width: 1.5px;
 }
 
-.badge.python {
-  background: #306998;
+.badge.fastapi:hover,
+.badge.opencv:hover,
+.badge.yolov8:hover,
+.badge.scikit-learn:hover,
+.badge.google-gemini:hover,
+.badge.cohere-llm:hover,
+.badge.tailwind-css:hover,
+.badge.leafletjs:hover {
+  background: #374151;
+  color: white;
 }
 
-.badge.react {
-  background: #61dafb;
-  color: #000;
-}
-
-.badge.team {
-  background: #4a6cf7;
-}
-
-.badge.solo {
-  background: #8a4af7;
-}
-
-.badge.scikit-learn {
-  background: #f7931e;
-  color: #fff;
-}
-
-.badge.random-forest-classifier {
-  background: #228B22;
-  color: #fff;
-}
-
+/* TERTIARY - Supporting Technologies */
+.badge.random-forest-classifier,
+.badge.nextjs,
+.badge.web-scraping,
+.badge.google-analytics,
+.badge.html5,
+.badge.css3,
 .badge.smoteenn {
-  background: #6a1b9a;
-  color: #fff;
+  border-color: #6b7280;
+  color:
+    /* #6b7280*/
+    black;
+  border-width: 1px;
 }
 
-.badge.fastapi {
-  background: #009688;
-  color: #fff;
+.badge.random-forest-classifier:hover,
+.badge.nextjs:hover,
+.badge.web-scraping:hover,
+.badge.google-analytics:hover,
+.badge.html5:hover,
+.badge.css3:hover,
+.badge.smoteenn:hover {
+  background: #6b7280;
+  color: white;
 }
 
-.badge.mongodb {
-  background: #47A248;
-  color: #fff;
-}
-
-.badge.tailwind-css {
-  background: #38B2AC;
-  color: #fff;
-}
-
-.badge.pandas {
-  background: #150458;
-  /* dark blue/purple shade for Pandas */
-  color: #fff;
-}
-
+/* LIGHT - Databases & Libraries */
+.badge.mongodb,
+.badge.firebase,
+.badge.pandas,
 .badge.numpy {
-  background: #013243;
-  /* dark teal/blue for NumPy */
+  border-color: #9ca3af;
+  color:
+    /*#6b7280;*/
+    black;
+  border-width: 1px;
+}
+
+.badge.mongodb:hover,
+.badge.firebase:hover,
+.badge.pandas:hover,
+.badge.numpy:hover {
+  background: #9ca3af;
+  color: white;
+}
+
+/* SUBTLE - Metadata (Team/Solo Projects) */
+.badge.team,
+.badge.solo {
+  border-color: #9ca3af;
+  color: black;
+  border-width: 1px;
+}
+
+.badge.team:hover,
+.badge.solo:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* Image Container with Overlay */
+.project-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.project-image-container .project-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0;
+}
+
+/* Image zoom on card hover */
+.project-card:hover .project-image {
+  transform: scale(1.08);
+}
+
+/* Overlay that appears on hover */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  pointer-events: none;
+  /* Allows clicking through to the link */
+}
+
+.project-card:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Category badge inside overlay */
+.overlay-badge {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* YouTube button */
+.youtube-button {
+  background-color: #FF0000;
   color: #fff;
 }
 
-.badge.firebase {
-  background: #FFCA28;
-  /* Firebase yellow */
-  color: #000;
-}
-
-.badge.cohere-llm {
-  background: #6C63FF;
-  /* Cohere purple */
-  color: #fff;
-}
-
-.badge.web-scraping {
-  background: #FF6F61;
-  /* Coral/soft red for web scraping */
-  color: #fff;
-}
-
-.badge.google-analytics {
-  background: #F4B400;
-  color: #000;
-  /* black text looks good on orange */
-}
-
-/* Optional: Hover Effect for Badges */
-.project-card .badge:hover {
-  opacity: 0.85;
+.youtube-button:hover {
+  background-color: #CC0000;
 }
