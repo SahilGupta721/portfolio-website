@@ -6,6 +6,7 @@ import About from './pages/about.jsx';
 import Footer from './components/footer.jsx';
 import Navbar from './components/navbar.jsx';
 import { pageview } from './pages/analytics.jsx';
+import Work from './pages/work.jsx';
 
 function AppWrapper() {
   const location = useLocation();
