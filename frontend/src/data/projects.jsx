@@ -31,12 +31,11 @@ export const projects = [
     type: "solo",
     github: "https://github.com/SahilGupta721/CreditCardFraudDetector",
     live: "https://credit-card-fraud-detector-five.vercel.app/",
-    youtube: "https://youtube.com/watch?v=..." // ← Add this
   },
   {
     id: 2,
     name: "Mac-A-Park: Smart Parking Detection System",
-    description: "A real-time smart parking detection system that uses CCTV video feeds and YOLO-based computer vision to detect parking slot occupancy. It provides live availability updates through a dashboard, helping drivers quickly find free spots while reducing congestion, fuel wastage, and emissions.",
+    description: "A real-time smart parking system using CCTV and YOLO-based computer vision to detect slot occupancy, providing live availability updates that help drivers find spots while reducing congestion and emissions.",
     image: MacAParkImage,
     featured: true,
     category: "Computer Vision",
@@ -55,7 +54,8 @@ export const projects = [
     ],
     type: "team",
     github: "https://github.com/Yatriba-Rathod/Mac-a-thon-2026",
-    live: "https://mac-a-thon-2026-virid.vercel.app/"
+    live: "https://mac-a-thon-2026-virid.vercel.app/",
+    youtube: "https://www.youtube.com/watch?v=uIfYbZ2Hc68"
   },
 
   {
@@ -79,7 +79,8 @@ export const projects = [
     ],
     type: "team",
     github: "https://github.com/MichelleKellyy/ConnectKingston",
-    live: "https://connectkingston.vercel.app/"
+    live: "https://connectkingston.vercel.app/",
+    youtube: "https://www.youtube.com/watch?v=g-9S2uKoOG8"
   },
   {
     id: 4,
@@ -92,7 +93,8 @@ export const projects = [
     technologies: ["React", "TypeScript", "Google-Gemini", "Leaflet.js"],
     type: "team",
     github: "https://github.com/sarahhalime/EcoSphere",
-    live: "https://www.eco-sphere.co/"
+    live: "https://www.eco-sphere.co/",
+    youtube: "https://www.youtube.com/watch?v=aNzxBQMVHjo"
   },
   {
     id: 5,
@@ -105,7 +107,7 @@ export const projects = [
     technologies: ["React", "JavaScript", "Google-Gemini", "CSS3"],
     type: "solo",
     github: "https://github.com/SahilGupta721/InterviewPrep",
-    live: "https://interview-prep-dusky.vercel.app/"
+    live: "https://interview-prep-dusky.vercel.app/",
   },
   {
     id: 6,

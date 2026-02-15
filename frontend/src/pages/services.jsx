@@ -173,7 +173,6 @@ const Services = () => {
                 <li>Postman</li>
                 <li>Jira/Trello</li>
                 <li>MS Office 365</li>
-                <li>Visual Studio 2022</li>
                 <li>Visual Studio Code</li>
 
               </ul>

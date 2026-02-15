@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import '../css/home.css';
 import toronto from "../images/toronto.jpg";
+// Add these icon imports
+import { FaGithub, FaYoutube } from 'react-icons/fa';
+import { HiExternalLink } from 'react-icons/hi';
 
 function Home() {
   const featuredprojects = projects.filter(d => d.featured);
@@ -85,7 +88,7 @@ function Home() {
                           rel="noopener noreferrer"
                           className="project-button github-button"
                         >
-                          GitHub
+                          <FaGithub size={20} />
                         </a>
                       )}
 
@@ -96,7 +99,8 @@ function Home() {
                           rel="noopener noreferrer"
                           className="project-button live-button"
                         >
-                          Live Demo
+                          <HiExternalLink size={20} />
+
                         </a>
                       )}
                       {project.youtube && (
@@ -106,7 +110,7 @@ function Home() {
                           rel="noopener noreferrer"
                           className="project-button youtube-button"
                         >
-                          YouTube
+                          <FaYoutube size={20} />
                         </a>
                       )}
                     </div>
