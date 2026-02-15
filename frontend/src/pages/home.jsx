@@ -99,9 +99,9 @@ function Home() {
                           Live Demo
                         </a>
                       )}
-                      {projects.youtube && (
+                      {project.youtube && (
 
-                        <a href={projects.youtube}
+                        <a href={project.youtube}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="project-button youtube-button"
