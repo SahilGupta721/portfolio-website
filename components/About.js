@@ -59,50 +59,52 @@ export default function About() {
         <Services />
 
         {/* CTA Section */}
-        <div className={styles.ctaSection} id="contact">
-          <div className={styles.ctaContent}>
-            <h2>Let&apos;s Build the Future Together</h2>
-            <p>
-              I&apos;m driven to craft engaging and meaningful web experiences
-              that inspire and connect people. Join me as I continue to explore,
-              create, and innovate in the tech world.
-            </p>
-            <div className={styles.ctaButtons}>
-              <a
-                href="mailto:sahilgupta70500@gmail.com"
-                className={styles.ctaPrimary}
-              >
-                Get Started
-                <svg
-                  className={styles.ctaIcon}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+        <div className={styles.ctaWrapper}>
+          <div className={styles.ctaSection} id="contact">
+            <div className={styles.ctaContent}>
+              <h2>Let&apos;s Build the Future Together</h2>
+              <p>
+                I&apos;m driven to craft engaging and meaningful web experiences
+                that inspire and connect people. Join me as I continue to explore,
+                create, and innovate in the tech world.
+              </p>
+              <div className={styles.ctaButtons}>
+                <a
+                  href="mailto:sahilgupta70500@gmail.com"
+                  className={styles.ctaPrimary}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://linkedin.com/in/sahilgupta123"
-                className={styles.ctaSecondary}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-              <a
-                href="https://github.com/sahilgupta721"
-                className={styles.ctaSecondary}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View my Work <span aria-hidden="true">→</span>
-              </a>
+                  Get Started
+                  <svg
+                    className={styles.ctaIcon}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/sahilgupta123"
+                  className={styles.ctaSecondary}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Learn more <span aria-hidden="true">→</span>
+                </a>
+                <a
+                  href="https://github.com/sahilgupta721"
+                  className={styles.ctaSecondary}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View my Work <span aria-hidden="true">→</span>
+                </a>
+              </div>
             </div>
           </div>
 
