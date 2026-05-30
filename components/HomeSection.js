@@ -24,12 +24,12 @@ export default function Home() {
       </section>
 
       <section className="flex justify-center px-4 pt-20 sm:px-8 md:px-16 lg:px-24 xl:px-40">
-        <div className="mx-auto w-full max-w-[1280px]">
-          <h2 id="projects" className="px-4 pb-3 pt-5 text-2xl font-bold">
+        <div className="w-full max-w-[1280px]">
+          <h2 id="projects" className="pb-3 pt-5 text-2xl font-bold">
             Some of recent work
           </h2>
 
-          <div className="grid auto-rows-auto grid-flow-row grid-cols-[repeat(4,16rem)] gap-6 overflow-x-auto pb-4">
+          <div className="grid auto-rows-auto grid-flow-row grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-6 pb-4">
             {featuredProjects.map((project, index) => (
               <div
                 className="group relative flex w-64 shrink-0 flex-[0_0_16rem] flex-col gap-3 rounded-xl bg-white p-[5px] shadow-[0_4px_8px_rgba(0,0,0,0.1),0_6px_20px_rgba(0,0,0,0.08)] transition-[transform,box-shadow] duration-300 ease-in-out hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(0,0,0,0.2),0_15px_35px_rgba(0,0,0,0.12)]"
