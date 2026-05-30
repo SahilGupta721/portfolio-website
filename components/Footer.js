@@ -1,14 +1,15 @@
 import Link from "next/link";
-import styles from "../styles/Footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footerContainer}>
-        <div className={styles.footerInner}>
-          {/* Logo */}
-          <Link href="/" className={styles.footerLogo}>
-            <div className={styles.footerLogoIcon}>
+    <footer className="border-t border-[#f1e4dc]">
+      <div className="flex justify-center px-4 py-10 sm:px-8 md:px-16 md:py-12 lg:px-24 xl:px-40">
+        <div className="flex w-full max-w-[1280px] flex-col items-center justify-between gap-8 md:flex-row">
+          <Link
+            href="/"
+            className="group flex items-center gap-3 text-gray-900 no-underline transition-transform duration-200 ease-in-out"
+          >
+            <div className="h-7 w-7 text-black transition-transform duration-200 ease-in-out group-hover:scale-110">
               <svg
                 fill="currentColor"
                 viewBox="0 0 48 48"
@@ -21,19 +22,18 @@ export default function Footer() {
                 />
               </svg>
             </div>
-            <h2 className={styles.footerLogoText}>Sahil Gupta</h2>
+            <h2 className="font-playfair m-0 text-lg font-bold">Sahil Gupta</h2>
           </Link>
 
-          {/* Footer Links */}
-          <div className={styles.footerLinksSection}>
-            <p className={styles.footerCopy}>
+          <div className="text-center text-sm text-gray-600 md:text-right">
+            <p className="font-medium">
               &copy; {new Date().getFullYear()} Sahil Gupta. All Rights
               Reserved.
             </p>
-            <div className={styles.footerLinks}>
+            <div className="mt-3 flex justify-center gap-6 md:justify-end">
               <Link
                 href="mailto:sahilgupta70500@gmail.com"
-                className={styles.footerLink}
+                className="font-medium text-gray-600 no-underline transition-colors duration-200 ease-in-out hover:text-[#c76b51]"
               >
                 Contact me
               </Link>
