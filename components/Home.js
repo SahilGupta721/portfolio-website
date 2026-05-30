@@ -6,16 +6,16 @@ export default function Home() {
   const featuredProjects = projects.filter((d) => d.featured);
 
   return (
-    <div className="min-h-screen">
-      <section className="relative">
+    <div className="min-h-screen w-full overflow-x-clip">
+      <section className="relative w-full overflow-x-clip">
         <div className="flex justify-center p-5 sm:px-8 md:px-16 lg:px-24 xl:px-40">
           <div
-            className="flex min-h-[480px] w-full max-w-[1280px] flex-col items-center justify-center gap-6 rounded-2xl bg-cover bg-center bg-no-repeat p-8 text-center text-white"
+            className="flex min-h-[480px] w-full min-w-0 max-w-[1280px] flex-col items-center justify-center gap-6 rounded-2xl bg-cover bg-center bg-no-repeat p-8 text-center text-white"
             style={{
               backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(/toronto.jpg)`,
             }}
           >
-            <div className="font-playfair font-bold [&>h1]:text-4xl md:[&>h1]:text-5xl [&>h2]:text-lg [&>h2]:font-normal md:[&>h2]:text-xl">
+            <div className="font-playfair w-full break-words font-bold text-balance [&>h1]:text-4xl md:[&>h1]:text-5xl [&>h2]:text-lg [&>h2]:font-normal md:[&>h2]:text-xl">
               <h1>I&apos;m Sahil Gupta based in Toronto, Canada</h1>
               <h2>Software Developer | AI/ML | Project Analyst</h2>
             </div>
@@ -23,16 +23,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center px-4 pt-20 sm:px-8 md:px-16 lg:px-24 xl:px-40">
-        <div className="w-full max-w-[1280px]">
+      <section className="flex w-full min-w-0 justify-center overflow-x-clip px-4 pt-20 sm:px-8 md:px-16 lg:px-24 xl:px-40">
+        <div className="w-full min-w-0 max-w-[1280px]">
           <h2 id="projects" className="pb-3 pt-5 text-2xl font-bold">
             Some of recent work
           </h2>
 
-          <div className="grid auto-rows-auto grid-flow-row grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-6 pb-4">
+          <div className="grid min-w-0 grid-cols-1 gap-3 pb-4 md:grid-cols-2 md:gap-3.5 lg:grid-cols-3 xl:grid-cols-4">
             {featuredProjects.map((project, index) => (
               <div
-                className="group relative flex w-64 shrink-0 flex-[0_0_16rem] flex-col gap-3 rounded-xl bg-white p-[5px] shadow-[0_4px_8px_rgba(0,0,0,0.1),0_6px_20px_rgba(0,0,0,0.08)] transition-[transform,box-shadow] duration-300 ease-in-out hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(0,0,0,0.2),0_15px_35px_rgba(0,0,0,0.12)]"
+                className="group relative flex w-full min-w-0 flex-col gap-3 overflow-hidden rounded-xl bg-white p-[5px] shadow-[0_4px_8px_rgba(0,0,0,0.1),0_6px_20px_rgba(0,0,0,0.08)] transition-[transform,box-shadow] duration-300 ease-in-out hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(0,0,0,0.2),0_15px_35px_rgba(0,0,0,0.12)]"
                 key={index}
               >
                 <a
@@ -56,17 +56,17 @@ export default function Home() {
                   </div>
                 </a>
 
-                <div className="px-1">
-                  <p className="px-3 font-bold">{project.name}</p>
-                  <p className="px-3 text-[0.9rem] leading-snug text-[#333]">
+                <div className="min-w-0 px-1">
+                  <p className="break-words px-3 font-bold">{project.name}</p>
+                  <p className="break-words px-3 text-[0.9rem] leading-snug text-[#333]">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 px-3 pb-3">
+                  <div className="flex min-w-0 flex-wrap gap-2 px-3 pb-3">
                     {project.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="inline-flex items-center justify-center rounded-lg border border-gray-400 bg-white px-2 py-1 text-xs font-medium text-black transition-all duration-200 ease-in-out"
+                        className="inline-flex max-w-full items-center justify-center break-words rounded-lg border border-gray-400 bg-white px-2 py-1 text-xs font-medium text-black transition-all duration-200 ease-in-out"
                       >
                         {tech}
                       </span>
@@ -76,13 +76,13 @@ export default function Home() {
                     </span>
                   </div>
 
-                  <div className="flex flex-wrap gap-2 px-3 pb-3">
+                  <div className="flex min-w-0 flex-wrap gap-2 px-3 pb-3">
                     {project.github && (
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-1 cursor-pointer items-center justify-center rounded-lg bg-[#1e1e1e] px-3 py-2 text-center text-[0.85rem] font-semibold text-white no-underline transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
+                        className="flex min-w-0 flex-1 cursor-pointer items-center justify-center rounded-lg bg-[#1e1e1e] px-3 py-2 text-center text-[0.85rem] font-semibold text-white no-underline transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
                       >
                         <FaGithub size={20} />
                       </a>
@@ -92,7 +92,7 @@ export default function Home() {
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-1 cursor-pointer items-center justify-center rounded-lg bg-[#38b2ac] px-3 py-2 text-center text-[0.85rem] font-semibold text-white no-underline transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
+                        className="flex min-w-0 flex-1 cursor-pointer items-center justify-center rounded-lg bg-[#38b2ac] px-3 py-2 text-center text-[0.85rem] font-semibold text-white no-underline transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
                       >
                         <HiExternalLink size={20} />
                       </a>
@@ -102,7 +102,7 @@ export default function Home() {
                         href={project.youtube}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-1 cursor-pointer items-center justify-center rounded-lg bg-[#FF0000] px-3 py-2 text-center text-[0.85rem] font-semibold text-white no-underline transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#CC0000] hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
+                        className="flex min-w-0 flex-1 cursor-pointer items-center justify-center rounded-lg bg-[#FF0000] px-3 py-2 text-center text-[0.85rem] font-semibold text-white no-underline transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#CC0000] hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
                       >
                         <FaYoutube size={20} />
                       </a>

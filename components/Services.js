@@ -1,7 +1,7 @@
 export default function Services() {
   return (
     <section
-      className="bg-gradient-to-b from-gray-50 to-white px-6 py-24"
+      className="w-full overflow-x-clip bg-gradient-to-b from-gray-50 to-white px-4 py-24 sm:px-6"
       id="services"
     >
       <div className="mx-auto max-w-[1000px]">
@@ -18,7 +18,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-[1000px] grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6">
+        <div className="mx-auto grid min-w-0 max-w-[1000px] grid-cols-1 gap-6 sm:grid-cols-2">
           <div className="rounded-[1.25rem] border border-[#f1f1f1] bg-white p-8 transition-shadow duration-300 ease-in-out hover:shadow-[0_8px_20px_rgba(0,0,0,0.06)]">
             <dt className="flex items-center gap-4 text-lg font-semibold text-gray-900">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e0f2fe] text-[#0369a1]">

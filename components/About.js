@@ -2,8 +2,8 @@ import Services from "./Services";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-transparent">
-      <main className="isolate">
+    <div className="min-h-screen w-full overflow-x-clip bg-transparent">
+      <main className="isolate w-full overflow-x-clip">
         <div id="about" className="bg-white pb-20 pt-24 sm:pb-28 sm:pt-32">
           <div className="mx-auto max-w-[1280px] px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40">
             <div className="mx-auto max-w-3xl text-center">
@@ -61,10 +61,10 @@ export default function About() {
 
         <Services />
 
-        <div className="flex justify-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-16">
-          <div className="mx-auto w-full max-w-[1280px]">
+        <div className="relative w-full overflow-x-clip px-4 py-16 sm:px-8 md:px-16 lg:px-24 xl:px-40">
+          <div className="relative mx-auto w-full min-w-0 max-w-[1280px]">
             <div
-              className="relative overflow-hidden rounded-[1.875rem] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-6 sm:px-8 md:px-12 lg:px-16 py-24 shadow-[0_25px_50px_rgba(0,0,0,0.25)]"
+              className="relative overflow-hidden rounded-[1.875rem] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-6 py-24 shadow-[0_25px_50px_rgba(0,0,0,0.25)] sm:px-8 md:px-12 lg:px-16"
               id="contact"
             >
               <div className="relative z-[1]">
@@ -76,7 +76,7 @@ export default function About() {
                   that inspire and connect people. Join me as I continue to explore,
                   create, and innovate in the tech world.
                 </p>
-                <div className="flex flex-col gap-4 sm:flex-row">
+                <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
                   <a
                     href="mailto:sahilgupta70500@gmail.com"
                     className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-8 py-3.5 text-base font-semibold text-gray-900 no-underline shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-all duration-200 hover:scale-105 hover:bg-gray-50"
@@ -115,10 +115,10 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="pointer-events-none absolute -right-20 -top-20 z-0 h-80 w-80 rounded-full bg-[rgba(216,125,107,0.1)] blur-[3rem]"></div>
-          <div className="pointer-events-none absolute -bottom-20 -left-20 z-0 h-80 w-80 rounded-full bg-[rgba(38,164,221,0.1)] blur-[3rem]"></div>
+            <div className="pointer-events-none absolute -right-20 -top-20 z-0 h-80 w-80 rounded-full bg-[rgba(216,125,107,0.1)] blur-[3rem]"></div>
+            <div className="pointer-events-none absolute -bottom-20 -left-20 z-0 h-80 w-80 rounded-full bg-[rgba(38,164,221,0.1)] blur-[3rem]"></div>
+          </div>
         </div>
       </main>
     </div>

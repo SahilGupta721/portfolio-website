@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import HomeSection from "../components/HomeSection";
+import HomeSection from "../components/Home";
 import About from "../components/About";
 import Footer from "../components/Footer";
 
