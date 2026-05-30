@@ -21,7 +21,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full overflow-x-clip bg-transparent">
+    <header className="sticky top-0 z-50 w-full overflow-x-clip bg-transparent py-2">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40">
         <div className="mx-auto my-2 flex w-full min-w-0 max-w-[1280px] items-center justify-between gap-4 rounded-full border border-gray-200 bg-white/90 px-4 py-[0.85rem] shadow-sm backdrop-blur-[12px]">
           <Link className="flex min-w-0 shrink items-center gap-3 no-underline" href="/">
