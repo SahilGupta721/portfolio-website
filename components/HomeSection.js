@@ -23,8 +23,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center p-5 pt-20 sm:px-8 md:px-16 lg:px-24 xl:px-40">
-        <div className="mx-auto w-full max-w-[1280px] px-6 [-ms-overflow-style:none] [scrollbar-width:none] lg:px-8 [&::-webkit-scrollbar]:hidden">
+      <section className="flex justify-center px-4 pt-20 sm:px-8 md:px-16 lg:px-24 xl:px-40">
+        <div className="mx-auto w-full max-w-[1280px]">
           <h2 id="projects" className="px-4 pb-3 pt-5 text-2xl font-bold">
             Some of recent work
           </h2>
