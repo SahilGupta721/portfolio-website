@@ -6,6 +6,7 @@
 }
 
 @layer base {
+
   *,
   *::before,
   *::after {
@@ -17,7 +18,9 @@
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
+    overflow-x: hidden;
     scroll-padding-top: 72px;
+
   }
 
   #__next {
