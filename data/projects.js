@@ -33,6 +33,7 @@ export const projects = [
     description:
       "An audio story game that teaches braille to visually impaired kids through quests and physical interaction. Players press braille patterns on a 3D-printed Makey Makey controller to build letters, unlock spells, solve puzzles, and progress through an accessible fantasy adventure narrated with AI-generated audio.",
     image: "/braillequest.png",
+    award: "🏆 Winner · HuskyHacks 2026",
     featured: true,
     category: "Accessibility",
     link: "https://github.com/SahilGupta721/BrailleQuest",
@@ -40,7 +41,6 @@ export const projects = [
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
-      "HTML5",
       "ElevenLabs",
       "Makey Makey",
       "Figma",
