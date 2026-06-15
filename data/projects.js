@@ -48,6 +48,8 @@ export const projects = [
     ],
     type: "team",
     github: "https://github.com/SahilGupta721/BrailleQuest",
+    live: "https://braille-quest.vercel.app/",
+    youtube: "https://www.youtube.com/watch?v=DxrkzQoPOzA&t=1s"
   },
 
   {
