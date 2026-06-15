@@ -27,6 +27,28 @@ export const projects = [
     live: "https://codeyvillage.vercel.app/",
     youtube: "https://www.youtube.com/watch?v=_GpzlR9-mik"
   },
+  {
+    id: 9,
+    name: "BrailleQuest",
+    description:
+      "An audio story game that teaches braille to visually impaired kids through quests and physical interaction. Players press braille patterns on a 3D-printed Makey Makey controller to build letters, unlock spells, solve puzzles, and progress through an accessible fantasy adventure narrated with AI-generated audio.",
+    image: "/braillequest.png",
+    featured: true,
+    category: "Accessibility",
+    link: "https://github.com/SahilGupta721/BrailleQuest",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "HTML5",
+      "ElevenLabs",
+      "Makey Makey",
+      "Figma",
+      "Onshape",
+    ],
+    type: "team",
+    github: "https://github.com/SahilGupta721/BrailleQuest",
+  },
 
   {
     id: 1,
