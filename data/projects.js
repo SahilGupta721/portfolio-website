@@ -5,7 +5,7 @@ export const projects = [
     name: "CodeyVillage",
     description:
       "A gamified multiplayer productivity platform where developers earn in-game coins by solving LeetCode problems, pushing GitHub commits, and submitting job applications, then spend them to build and decorate a shared pixel-art island with friends in real time.",
-    image: "public/CodeyVillage.png",
+    image: "/CodeyVillage.png",
     featured: true,
     award: "🏆 Winner · GDG Hacks 3",
     category: "Game Dev",
