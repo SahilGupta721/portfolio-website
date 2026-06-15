@@ -13,15 +13,21 @@ export default function Home() {
             className="flex min-h-[480px] w-full min-w-0 max-w-[1280px] flex-col items-center justify-center gap-6 rounded-2xl bg-cover bg-center bg-no-repeat p-8 text-center text-white"
             style={{
               backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(/toronto.jpg)`,
+
             }}
           >
-            <div className="font-playfair w-full break-words font-bold text-balance [&>h1]:text-4xl md:[&>h1]:text-5xl [&>h2]:text-lg [&>h2]:font-normal md:[&>h2]:text-xl">
-              <h1>I&apos;m Sahil Gupta based in Toronto, Canada</h1>
-              <h2>Software Developer | AI/ML | Project Analyst</h2>
+            <div className="font-playfair w-full break-words font-bold text-balance [&>h1]:text-4xl md:[&>h1]:text-5xl [&>h2]:text-lg [&>h2]:font-normal md:[&>h2]:text-xl"
+            >
+              <h1>
+                I&apos;m Sahil Gupta based in Toronto, Canada
+              </h1>
+              <h2 >
+                Software Developer | AI/ML | Project Analyst
+              </h2>
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       <section className="flex w-full min-w-0 justify-center overflow-x-clip px-4 pt-20 sm:px-8 md:px-16 lg:px-24 xl:px-40">
         <div className="w-full min-w-0 max-w-[1280px]">
@@ -44,6 +50,13 @@ export default function Home() {
                   className="cursor-pointer"
                 >
                   <div className="relative aspect-video w-full overflow-hidden rounded-t-xl">
+                    {/* ADD THIS 👇 */}
+                    {project.award && (
+                      <div className="absolute top-2 left-2 z-10 flex items-center gap-1 rounded-full bg-yellow-400 px-3 py-1 text-xs font-semibold text-yellow-900 shadow-md">
+                        {project.award}
+                      </div>
+                    )}
+
                     <div
                       className="h-full w-full bg-cover bg-center transition-transform duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:scale-[1.08]"
                       style={{ backgroundImage: `url("${project.image}")` }}
@@ -114,6 +127,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </div >
   );
 }

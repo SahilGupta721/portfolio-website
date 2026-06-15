@@ -1,4 +1,33 @@
 export const projects = [
+
+  {
+    id: 8,
+    name: "CodeyVillage",
+    description:
+      "A gamified multiplayer productivity platform where developers earn in-game coins by solving LeetCode problems, pushing GitHub commits, and submitting job applications, then spend them to build and decorate a shared pixel-art island with friends in real time.",
+    image: "public/CodeyVillage.png",
+    featured: true,
+    award: "🏆 Winner · GDG Hacks 3",
+    category: "Game Dev",
+    link: "https://github.com/SahilGupta721/GDG-HACKS3",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Phaser 3",
+      "Python",
+      "FastAPI",
+      "MongoDB",
+      "Firebase",
+      "WebSockets",
+      "Chrome Extension",
+      "GitHub API",
+    ],
+    type: "team",
+    github: "https://github.com/SahilGupta721/GDG-HACKS3",
+    live: "https://codeyvillage.vercel.app/",
+    youtube: "https://www.youtube.com/watch?v=_GpzlR9-mik"
+  },
+
   {
     id: 1,
     name: "Credit Card Fraud Detection System",
@@ -6,6 +35,7 @@ export const projects = [
       "An end-to-end AI system that detects fraudulent credit card transactions using machine learning, featuring a FastAPI backend and a React dashboard for real-time insights and KPI visualization.",
     image: "/fraud.webp",
     featured: true,
+    //award: "🏆 1st Place · GDG Hacks 3",
     category: "AI/ML",
     link: "https://github.com/SahilGupta721/CreditCardFraudDetector",
     technologies: [
