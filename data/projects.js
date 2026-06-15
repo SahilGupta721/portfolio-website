@@ -176,7 +176,7 @@ export const projects = [
     description:
       "Catch bugs, rack up points, and keep up as the speed increases.",
     image: "/bug.jpg",
-    featured: true,
+    featured: false,
     category: "Game Dev",
     link: "http://studentweb.cencol.ca/sgupt172/Assignment-3/assignment3.html",
     technologies: ["HTML5", "JavaScript", "CSS3"],
